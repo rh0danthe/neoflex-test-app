@@ -1,0 +1,59 @@
+@import 'src/styles/base/vars';
+
+$colorsMapButton: (
+  'transparent': (
+    'background': transparent,
+    'text': map-get($color-list, 'black'),
+    'hover_text': map-get($color-list, 'black'), 
+    'active': map-get($color-list, 'background'),
+  ),
+  'black': (
+    'text': map-get($color-list, 'white'),
+    'background': map-get($color-list, 'black'),
+    'active': map-get($color-list, 'gray'),
+  ),
+);
+
+@mixin colorizeButton($bg: undefined, $border: undefined, $text: undefined) {
+  color: $text;
+  background-color: $bg;
+  border-color: $border;
+}
+
+@each $name, $colors in $colorsMapButton {
+  .btn_#{$name} {
+    box-shadow: none;
+
+    @include colorizeButton(
+      map-get($colors, 'background'),
+      map-get($colors, 'border'),
+      map-get($colors, 'text')
+    );
+
+    &:hover {
+      @include colorizeButton(
+        map-get($colors, 'hover_background'),
+        map-get($colors, 'hover_border'),
+        map-get($colors, 'hover_text') 
+      );
+      text-decoration: underline; 
+    }
+
+    &:checked, &:active {
+      @include colorizeButton(
+        map-get($colors, 'active'),
+        map-get($colors, 'active_border'),
+        map-get($colors, 'text')
+      );
+    }
+  }
+}
+
+.base {
+  border-style: none;
+  border-radius: 30px;}
+
+  
+.font_600{
+  font-weight: 600;
+}

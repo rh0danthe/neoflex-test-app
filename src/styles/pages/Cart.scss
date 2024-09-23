@@ -1,0 +1,42 @@
+@import 'src/styles/base/vars';
+
+.cart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 2%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    min-height: 60vh;
+}
+
+.cart__payform{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: map-get($color-list, 'white');
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    border-radius: 30px;
+    min-width: 30%;
+    height: 110px;
+    padding-top:20px;
+    margin-top:34px;
+}
+
+.cart__payform-total{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    padding-left:20px;
+    padding-right: 20px;
+}
+
+.cart__payform-button{
+    height: 50%;
+    border-radius: 20px;
+}
+
+.font_600{
+    font-weight: 600;
+}

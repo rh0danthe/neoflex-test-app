@@ -1,5 +1,6 @@
+import products from "../products";
+
 export type Cart = {
-    count: number;
     items: CartItem[];
 };
 
@@ -10,7 +11,6 @@ export type CartItem = {
 
 function clear() {
     const emptyCart = {
-        count: 0,
         items: [],
     };
 
@@ -47,13 +47,14 @@ function add(id: number, quantity?: number) {
     } else {
         cart.items.push({ productId: id, quantity: quantity ?? 1 });
     }
-
+    window.dispatchEvent(new Event("cartUpdated"));
     return saveCart(cart);
 }
 
 function remove(id: number) {
     const cart = getCart();
     cart.items = cart.items.filter((item) => item.productId !== id);
+    window.dispatchEvent(new Event("cartUpdated"));
     saveCart(cart);
 }
 
@@ -88,9 +89,32 @@ function decreaseQuantity(id: number) {
 }
 
 function getAll(): Cart {
-    // TODO: добавить фильтры
     const cart = getCart();
     return cart;
+}
+
+function getTotal(): number {
+    const cart = getCart();
+    const all = products.getAll();
+    const total = cart.items.reduce((sum, cartItem) => {
+        const product = all.find((p) => p.id === cartItem.productId);
+        if (product) {
+            const productTotal = product.price * cartItem.quantity;
+            return sum + productTotal;
+        }
+        return sum;
+    }, 0);
+
+    return total;
+}
+
+function getTotalQuantity(): number {
+    const cart = getCart();
+    const totalQuantity = cart.items.reduce((sum, cartItem) => {
+        return sum + cartItem.quantity;
+    }, 0);
+
+    return totalQuantity;
 }
 
 export default Object.freeze({
@@ -100,4 +124,6 @@ export default Object.freeze({
     increaseQuantity,
     decreaseQuantity,
     getAll,
+    getTotal,
+    getTotalQuantity,
 });

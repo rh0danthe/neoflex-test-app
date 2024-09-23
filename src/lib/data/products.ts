@@ -29,7 +29,7 @@ export const products: Product<HeadphonesMeta>[] = [
         price: 3527,
         discount: 600,
         rating: 4.7,
-        imageUrl: "/public/headphones/wired/1.png",
+        imageUrl: "/headphones/wired/1.png",
         meta: {
             type: "wired",
             images: [],
@@ -41,7 +41,7 @@ export const products: Product<HeadphonesMeta>[] = [
         type: 'headphones',
         price: 2327,
         rating: 4.5,
-        imageUrl: "/public/headphones/wired/2.png",
+        imageUrl: "/headphones/wired/2.png",
         meta: {
             type: "wired",
             images: [],
@@ -53,7 +53,7 @@ export const products: Product<HeadphonesMeta>[] = [
         type: 'headphones',
         price: 2327,
         rating: 4.5,
-        imageUrl: "/public/headphones/wired/3.png",
+        imageUrl: "/headphones/wired/3.png",
         meta: {
             type: "wired",
             images: [],
@@ -65,7 +65,7 @@ export const products: Product<HeadphonesMeta>[] = [
         type: 'headphones',
         price: 2927,
         rating: 4.7,
-        imageUrl: "/public/headphones/wired/4.png",
+        imageUrl: "/headphones/wired/4.png",
         meta: {
             type: "wired",
             images: [],
@@ -77,7 +77,7 @@ export const products: Product<HeadphonesMeta>[] = [
         type: 'headphones',
         price: 2327,
         rating: 4.5,
-        imageUrl: "/public/headphones/wired/5.png",
+        imageUrl: "/headphones/wired/5.png",
         meta: {
             type: "wired",
             images: [],
@@ -89,7 +89,7 @@ export const products: Product<HeadphonesMeta>[] = [
         type: 'headphones',
         price: 2327,
         rating: 4.5,
-        imageUrl: "/public/headphones/wired/6.png",
+        imageUrl: "/headphones/wired/6.png",
         meta: {
             type: "wired",
             images: [],
@@ -101,7 +101,7 @@ export const products: Product<HeadphonesMeta>[] = [
         type: 'headphones',
         price: 9527,
         rating: 4.7,
-        imageUrl: "/public/headphones/wireless/1.png",
+        imageUrl: "/headphones/wireless/1.png",
         meta: {
             type: "wireless",
             images: [],
@@ -113,7 +113,7 @@ export const products: Product<HeadphonesMeta>[] = [
         type: 'headphones',
         price: 6527,
         rating: 4.7,
-        imageUrl: "/public/headphones/wireless/2.png",
+        imageUrl: "/headphones/wireless/2.png",
         meta: {
             type: "wireless",
             images: [],
@@ -125,7 +125,7 @@ export const products: Product<HeadphonesMeta>[] = [
         type: 'headphones',
         price: 7527,
         rating: 4.7,
-        imageUrl: "/public/headphones/wireless/3.png",
+        imageUrl: "/headphones/wireless/3.png",
         meta: {
             type: "wireless",
             images: [],

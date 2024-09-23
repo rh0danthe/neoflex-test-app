@@ -1,0 +1,17 @@
+.cardlist{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cardlist__content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:40px;
+    flex-wrap: wrap;
+    
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+

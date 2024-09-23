@@ -1,7 +1,6 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --font-family:  'Montserrat', sans-serif;
+  --line-height: 20.72px;
 
   --background-color: #EAEAEA;
 
@@ -9,15 +8,12 @@
   text-rendering: optimizeLegibility;
 }
 
-#root {
-  max-width: 77%;
-  min-height: 100vh;
-  margin: 0 auto;
-}
 
 body {
   background-color: var(--background-color);
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  font-family: var(--font-family);
+  line-height: var(--line-height);
 }
